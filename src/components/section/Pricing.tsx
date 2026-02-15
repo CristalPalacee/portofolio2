@@ -18,7 +18,7 @@ interface Plan {
 const Pricing = () => {
 
     const Router = useRouter();
-const PhoneNumber = "082295244838"
+const PhoneNumber = "6282295244838"
 
 
 
