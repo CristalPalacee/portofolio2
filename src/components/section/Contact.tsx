@@ -69,7 +69,7 @@ const { formAction, isPending, state } = useContactForm();
                 {[Github, Linkedin, Twitter].map((Icon, idx) => (
                   <a
                     key={idx}
-                    href="https://github.com/indraaditya"
+                    href="https://github.com/CristalPalacee"
                     className="p-3 rounded-full bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition-all hover:scale-110"
                   >
                     <Icon className="w-5 h-5" />

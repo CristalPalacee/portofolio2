@@ -15,7 +15,7 @@ const About = () => {
   ];
 
   return (
-    <Section id="about" className=" md:max-w-8xl lg:p-15">
+    <section id="about" className=" lg:max-w-7xl md:max-w-4xl max-w-sm px-5 md:px-10 lg:p-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
         {/* --- KOLOM KIRI: TEXT & STATS --- */}
@@ -38,7 +38,7 @@ const About = () => {
             </span>
           </h2>
 
-          <p className="text-gray-400 text-lg leading-relaxed mb-6">
+          <p className="text-gray-400 lg:text-lg md:text-md leading-relaxed mb-6">
             Halo! Saya adalah seorang Frontend Developer yang berbasis di Indonesia. 
             Saya tidak hanya menulis kode, tapi saya membangun solusi. Dengan latar belakang 
             teknik yang kuat dan mata untuk desain, saya menciptakan aplikasi web yang 
@@ -121,7 +121,7 @@ const About = () => {
         </motion.div>
 
       </div>
-    </Section>
+    </section>
   );
 };
 

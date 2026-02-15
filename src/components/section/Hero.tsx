@@ -43,12 +43,12 @@ export default function Hero() {
           Available for freelance work
         </motion.div>
         
-        <motion.h1 variants={fadeInUp} className="text-5xl px-2 relative  md:text-7xl font-bold leading-tight tracking-tight bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent pb-4">
-        <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-l absolute md:left-30 left-22  from-blue-100 ">I`am </span><br />
+        <motion.h1 variants={fadeInUp} className="text-4xl px-2 relative  md:text-7xl font-bold leading-tight tracking-tight bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent pb-4">
+        <span className="font-extrabold text-transparent bg-clip-text text-white text-center  left-1/2 transform -translate-x-1/2 ">I`am </span><br />
           <span className="text-blue-500 font-extrabold">WEB DEVELOPER</span>
         </motion.h1>
 
-        <motion.p variants={fadeInUp} className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        <motion.p variants={fadeInUp} className="text-sm  md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
           {PROFILE.bio}
         </motion.p>
 
