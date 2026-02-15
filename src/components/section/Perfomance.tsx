@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+import React, { use } from "react";
 import { Gauge, ShieldCheck, Zap, Search } from "lucide-react";
 import { ScrollReveal } from "../ui/ScrollReveal";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 
 interface Score {
@@ -12,6 +13,8 @@ interface Score {
     color: string;
 }
 const WebPerformance = () => {
+
+
   const scores: Score[] = [
     { label: "Performance", value: 94, icon: <Zap className="text-yellow-400" />, color: "from-yellow-500/50" },
     { label: "Accessibility", value: 94, icon: <Gauge className="text-blue-400" />, color: "from-blue-500/50" },
