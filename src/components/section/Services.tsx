@@ -38,12 +38,11 @@ const services: Service[] = [
 
 const Services = () => {
   return (
-    <Section id="services" className="bg-neutral-950/50"> 
+    <Section id="services" > 
       {/* Header */}
       <div className="mb-16 text-center">
         <ScrollReveal direction="down"
-        amount={1}
-        margin="-50px"
+        
         duration={1}
         transitionType="easeIn"
         className=" w-full "
@@ -56,16 +55,15 @@ const Services = () => {
       </div>
 
       {/* Grid Card */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 sm:px-5 px-3 lg:grid-cols-4 gap-6">
         {services.map((service, index) => (
           <ScrollReveal
            key={index}
             direction="up" 
             duration={1}
-            margin="-100px"
             delay={index * 0.2} // Memberikan efek muncul bergantian
             transitionType="spring" // Agar terasa lebih dinamis (membal)
-            amount={0.2} // Efek hover sederhana
+             // Efek hover sederhana
           >
             {/* Icon dengan efek glow saat hover */}
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-colors group">

@@ -2,19 +2,23 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin } from "lucide-react";
 import { PROFILE } from "@/lib/data";
+import ShinyText from "../ui/ShinyText";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
+  visible: { opacity: 1, y: 0 },
+  
+   
 };
 
 const staggerContainer = {
-  visible: { transition: { staggerChildren: 0.1 } }
+  visible: { transition: { staggerChildren: 0.1 } },
+
 };
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full flex flex-col justify-center items-center text-center px-4 pt-20">
+    <section className="relative min-h-screen w-full shadow-xl shadow-black/70 flex flex-col justify-center items-center text-center px-4 pt-20">
 
 
     {/* --- BACKGROUND LAYER START --- */}
@@ -44,8 +48,19 @@ export default function Hero() {
         </motion.div>
         
         <motion.h1 variants={fadeInUp} className="text-4xl px-2 relative  md:text-7xl font-bold leading-tight tracking-tight bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent pb-4">
-        <span className="font-extrabold text-transparent bg-clip-text text-white text-center  left-1/2 transform -translate-x-1/2 ">I`am </span><br />
-          <span className="text-blue-500 font-extrabold">WEB DEVELOPER</span>
+        <span className="font-extrabold text-center  left-1/2 transform -translate-x-1/2 ">I`am </span><br />
+          <ShinyText  
+          speed={3}
+          delay={0}
+          color="oklch(62.3% 0.214 259.815)"
+          shineColor="oklch(93.2% 0.032 255.585)"
+          spread={150}
+          direction="left"
+          yoyo={false}
+          pauseOnHover={false}
+          disabled={false}
+          text="WEB DEVELOPER" className="text-blue-500 font-extrabold">
+          </ShinyText>
         </motion.h1>
 
         <motion.p variants={fadeInUp} className="text-sm  md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -53,16 +68,11 @@ export default function Hero() {
         </motion.p>
 
         <motion.div variants={fadeInUp} className="flex flex-wrap items-center justify-center gap-4 pt-8">
-          <a href="#projects" className="group bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-medium transition-all flex items-center gap-2">
-            View Work
+          <a href="#projects" className="group cursor-pointer z-9999 bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-medium transition-all flex items-center gap-2">
+           Donwload CV
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
-          <a href={PROFILE.socials.github} target="_blank" rel="noopener" className="glass p-3 rounded-full hover:bg-white/10 transition-colors">
-            <Github className="w-5 h-5" />
-          </a>
-          <a href={PROFILE.socials.linkedin} target="_blank" rel="noopener" className="glass p-3 rounded-full hover:bg-white/10 transition-colors">
-            <Linkedin className="w-5 h-5" />
-          </a>
+          
         </motion.div>
       </motion.div>
     </section>
