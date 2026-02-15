@@ -18,12 +18,12 @@ interface Plan {
 const Pricing = () => {
 
     const Router = useRouter();
-const PhoneNumber = "6282295244838"
+    const PhoneNumber = "6282295244838"
 
 
 
-const handleKonsultasi = (plan: string) => {
-    const message = encodeURIComponent(`Halo Risfana, saya tertarik dengan paket layanan ${plan}.`);
+const handleKonsultasi = (plan: string, planPrice: string) => {
+ const message = encodeURIComponent(`Halo Risfana, saya tertarik dengan paket layanan ${plan} diharga ${planPrice}.`);
   const WhatsappUrl = `https://wa.me/${PhoneNumber}?text=${message}`;
   Router.push(WhatsappUrl);
 };
@@ -114,7 +114,7 @@ const handleKonsultasi = (plan: string) => {
                   ))}
                 </ul>
 
-                <button onClick={() => handleKonsultasi(plan.name)} className={`w-full py-4 rounded-xl font-bold transition-all duration-300 ${plan.recommended ? 'bg-white text-black hover:bg-gray-200' : 'bg-white/5 text-white border border-white/10 hover:bg-white/10'}`}>
+                <button onClick={() => handleKonsultasi(plan.name, plan.price)} className={`w-full py-4 rounded-xl font-bold transition-all duration-300 ${plan.recommended ? 'bg-white text-black hover:bg-gray-200' : 'bg-white/5 text-white border border-white/10 hover:bg-white/10'}`}>
                   Konsultasi Sekarang
                 </button>
               </div>
