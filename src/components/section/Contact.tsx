@@ -37,7 +37,7 @@ const { formAction, isPending, state } = useContactForm();
           </p>
         </div>
 
-        <div className="container lg:pt-15 px-2 mx-auto sm:max-w-5xl lg:max-w-7xl">
+        <div className="container lg:pt-15 mx-auto sm:max-w-5xl lg:max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 ">
           
             {/* --- KOLOM KIRI: INFO --- */}
@@ -86,8 +86,8 @@ const { formAction, isPending, state } = useContactForm();
             >
               <form action={formAction} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm text-gray-400">Name</label>
+                  <div className="space-y-4">
+                    <label className="text-sm space-y text-gray-400">Name</label>
                     <input
                       name="name"
                       type="text"
@@ -95,7 +95,7 @@ const { formAction, isPending, state } = useContactForm();
                       className="w-full bg-neutral-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-gray-600"
                     />
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-4">
                     <label className="text-sm text-gray-400">Email</label>
                     <input
                       type="email"
