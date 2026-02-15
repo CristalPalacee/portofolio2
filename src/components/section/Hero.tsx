@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin } from "lucide-react";
 import { PROFILE } from "@/lib/data";
 import ShinyText from "../ui/ShinyText";
-import { filter } from "framer-motion/client";
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -14,7 +14,7 @@ const fadeInUp = {
 
 const staggerContainer = {
   visible: { transition: { staggerChildren: 0.5 },
-          filter: { blur: 3, opacity: 1 },
+        
 },
 
 };
