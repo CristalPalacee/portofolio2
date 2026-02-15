@@ -76,7 +76,6 @@ const handleKonsultasi = (plan: string, planPrice: string) => {
               direction="up"
               delay={index * 0.1}
               transitionType="spring"
-              amount={0.1}
               className="h-full"
             >
               <div className={`relative h-full flex flex-col p-8 rounded-3xl border border-white/10 bg-neutral-900/50 backdrop-blur-xl transition-all duration-500 hover:border-white/20 group ${plan.recommended ? 'scale-105 z-10 border-purple-500/50 shadow-[0_0_30px_rgba(168,85,247,0.15)]' : ''}`}>
@@ -114,7 +113,7 @@ const handleKonsultasi = (plan: string, planPrice: string) => {
                   ))}
                 </ul>
 
-                <button onClick={() => handleKonsultasi(plan.name, plan.price)} className={`w-full py-4 rounded-xl font-bold transition-all duration-300 ${plan.recommended ? 'bg-white text-black hover:bg-gray-200' : 'bg-white/5 text-white border border-white/10 hover:bg-white/10'}`}>
+                <button onClick={() => handleKonsultasi(plan.name, plan.price)} className={`w-full cursor-pointer py-4 rounded-xl font-bold transition-all duration-300 ${plan.recommended ? 'bg-white text-black hover:bg-gray-200' : 'bg-white/5 text-white border border-white/10 hover:bg-white/10'}`}>
                   Konsultasi Sekarang
                 </button>
               </div>
