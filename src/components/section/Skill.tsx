@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Section from "./Section";
 import { SKILLS } from "@/lib/data";
 import { Code2, Database, Wrench } from "lucide-react";
+import { ScrollReveal } from "../ui/ScrollReveal";
 
 // Helper untuk ikon kategori
 const getIcon = (category: string) => {
@@ -38,12 +39,14 @@ export default function Skills() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
+        <ScrollReveal direction="down"  duration={1} margin="-200px 0px"> 
         <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/60 pb-2">
           Technical Arsenal
         </h2>
         <p className="text-gray-400 mt-4 max-w-xl mx-auto">
           Alat dan teknologi yang saya gunakan untuk mengubah konsep menjadi kode berkualitas tinggi.
         </p>
+        </ScrollReveal>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -57,12 +60,14 @@ export default function Skills() {
             className="space-y-4"
           >
             {/* Category Header */}
+    
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 glass rounded-lg bg-white/5">
                 {getIcon(skillGroup.category)}
               </div>
               <h3 className="text-xl font-bold text-white">{skillGroup.category}</h3>
             </div>
+          
 
             {/* Skills Grid */}
             <div className="flex flex-wrap gap-3">

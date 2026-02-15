@@ -5,8 +5,11 @@ import Section from "./Section";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Code, Globe, Cpu } from "lucide-react"; // Install lucide-react jika belum
+import { ScrollReveal } from "../ui/ScrollReveal";
 
 const About = () => {
+
+  
   // Data statistik singkat
   const stats = [
     { label: "Years Experience", value: "1+" },
@@ -16,9 +19,11 @@ const About = () => {
 
   return (
     <section id="about" className=" lg:max-w-7xl md:max-w-4xl max-w-sm px-5 md:px-10 lg:p-10">
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
         {/* --- KOLOM KIRI: TEXT & STATS --- */}
+        
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -26,6 +31,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           {/* Badge Kecil */}
+          <ScrollReveal direction="right" duration={1} amount={0.5} >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
             <Cpu className="w-4 h-4" />
             <span>Who I Am</span>
@@ -37,7 +43,10 @@ const About = () => {
               Design & Engineering
             </span>
           </h2>
+          </ScrollReveal>
 
+
+            <ScrollReveal direction="right" duration={1} amount={0.7} >
           <p className="text-gray-400 lg:text-lg md:text-md leading-relaxed mb-6">
             Halo! Saya adalah seorang Frontend Developer yang berbasis di Indonesia. 
             Saya tidak hanya menulis kode, tapi saya membangun solusi. Dengan latar belakang 
@@ -49,6 +58,7 @@ const About = () => {
             Saat tidak sedang coding, Anda bisa menemukan saya sedang bereksperimen 
             dengan teknologi AI terbaru atau berkontribusi di komunitas open source.
           </p>
+          </ScrollReveal>
 
           {/* Stats Grid */}
           <div className="grid grid-cols-3 gap-4 border-t border-white/10 pt-8">
@@ -63,13 +73,9 @@ const About = () => {
 
 
         {/* --- KOLOM KANAN: IMAGE CARD --- */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative flex justify-center lg:justify-end"
-        >
+        <ScrollReveal direction="left" duration={1}   className="relative lg:max-w-8xl  flex justify-center lg:justify-end" >
+         
+        
           {/* Container Relatif untuk menumpuk elemen */}
           <div className="relative w-72 h-96 md:w-100 md:h-[450px]">
             
@@ -84,7 +90,7 @@ const About = () => {
             <div className="absolute inset-2 rounded-xl overflow-hidden z-20 bg-neutral-800 border border-white/10 shadow-2xl">
                {/* Gunakan Unsplash sebagai placeholder sementara */}
               <Image 
-                src="" 
+                src="/image/profil.jpg" 
                 alt="Profile Picture"
                 fill
                 className="object-cover hover:scale-110 transition-transform duration-500"
@@ -96,7 +102,7 @@ const About = () => {
               {/* Nama di atas gambar (Opsional) */}
               <div className="absolute bottom-4 left-4 text-white">
                  <p className="text-xs font-mono text-blue-400 mb-1">Developer</p>
-                 <h3 className="text-xl font-bold">Your Name</h3>
+                 <h3 className="text-xl font-bold">Risfana</h3>
               </div>
             </div>
 
@@ -118,7 +124,7 @@ const About = () => {
             </motion.div>
 
           </div>
-        </motion.div>
+        </ScrollReveal>
 
       </div>
     </section>
